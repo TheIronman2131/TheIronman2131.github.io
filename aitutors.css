@@ -1,0 +1,173 @@
+/* General Reset */
+body, h1, h2, p, ol, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* Clean white background */
+    color: #333;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto 20px; /* Adds spacing between containers */
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Secondary Container */
+.secondary-container {
+    background-color: #eef5ff; /* Light blue background for differentiation */
+    padding: 20px 30px;
+    border: 2px solid #007bff; /* Blue border for emphasis */
+    text-align: center;
+}
+
+/* Header */
+header h1, header h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.secondary-container header h2 {
+    font-size: 24px; /* Slightly smaller header for secondary container */
+}
+
+/* Instructions Section */
+.instructions {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.instructions p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.instructions h2 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.instructions ol {
+    margin: 10px 0 10px 20px;
+    font-size: 16px;
+}
+
+.instructions ul {
+    list-style-type: circle;
+    margin: 5px 0 10px 30px;
+}
+
+.instructions a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.instructions a:hover {
+    text-decoration: underline;
+}
+
+/* Upload Section */
+.upload-section, .login-section {
+    margin: 20px 0;
+}
+
+.upload-button, .login-button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: 2px solid #007bff; /* Stylish blue border */
+    border-radius: 25px; /* Smooth rounded button */
+    background-color: #ffffff; /* White button */
+    color: #007bff; /* Blue text */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-button:hover, .login-button:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+    /* Adjust container width for scaled resolutions */
+    .container {
+        max-width: 90%; /* Take more horizontal space on smaller screens */
+        padding: 15px 20px;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    header h1, header h2 {
+        font-size: 24px;
+    }
+
+    .instructions h2 {
+        font-size: 18px;
+    }
+
+    .instructions p, .instructions ol {
+        font-size: 14px;
+    }
+
+    /* Button adjustments for smaller viewports */
+    .upload-button, .login-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* For tablet-like resolutions or smaller */
+    .container {
+        max-width: 100%; /* Full width */
+        padding: 10px 15px;
+    }
+
+    header h1, header h2 {
+        font-size: 20px;
+    }
+
+    .instructions h2 {
+        font-size: 16px;
+    }
+
+    .instructions p, .instructions ol {
+        font-size: 12px;
+    }
+
+    /* Reduce button size further for mobile */
+    .upload-button, .login-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
