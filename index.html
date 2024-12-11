@@ -13,11 +13,36 @@
         gtag('js', new Date());
         gtag('config', 'G-1R7FS64QQF');
     </script>
+    <script>
+        // Prevent link navigation until user clicks "OK" on the consent banner
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("consent-banner");
+            const links = document.querySelectorAll("a");
+            const okButton = document.getElementById("consent-ok");
+
+            // Disable all links initially
+            links.forEach(link => link.classList.add("disabled-link"));
+
+            // Enable links when "OK" is clicked
+            okButton.addEventListener("click", function () {
+                banner.style.display = "none"; // Hide the banner
+                links.forEach(link => link.classList.remove("disabled-link")); // Enable links
+            });
+        });
+    </script>
 </head>
 <body>
+    <div id="consent-banner" class="consent-banner">
+        <p>
+            <strong>Study Recommendation:</strong> It is recommended to use additional resources then what is on this website. These resources should be an aid in studying but not your only study method. You should make your own Quizlet/Knowt Flashcard set as a way of reviewing the material.
+            <br><br>
+    <em>Message brought to you by the Science Department.</em>
+        </p>
+        <button id="consent-ok" class="consent-button">Understand & Continue</button>
+    </div>
     <main class="container">
         <header>
-            <h1>Chemistry Midterm Resources</h1>
+            <h1>St. Stephen's & St. Agnes Midterm Resources</h1>
         </header>
         <section class="links">
             <a href="aitutors.html" class="link-button">
@@ -32,7 +57,11 @@
                 <img src="assets/knowtLogo.png" alt="Knowt Icon" class="button-icon">
                 Knowt Chemistry Flashcards
             </a>
-            
+            <section class="links">
+                <a href="https://knowt.com/flashcards/0c538498-c511-42b0-af15-e75db17cb773" class="link-button">
+                    <img src="assets/knowtLogo.png" alt="OpenAI Logo Icon" class="button-icon">
+                    Knowt Physics Flashcards
+                </a>
             <a href="tos.html" class="link-button">
                 <img src="/assets/file-earmark-pdf.svg" alt="Document PDF Icon" class="button-icon">
                 Terms of Use

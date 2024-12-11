@@ -44,8 +44,8 @@ header h1 {
     text-decoration: none;
     font-size: 16px;
     padding: 12px 20px;
-    border: 2px solid #333; /* Button border */
-    border-radius: 25px; /* Rounded edges */
+    border: 2px solid #333; 
+    border-radius: 25px; 
     background-color: #ffffff;
     color: #333;
     font-weight: bold;
@@ -53,13 +53,51 @@ header h1 {
 }
 
 .link-button:hover {
-    background-color: #f0f0f0; /* Slight hover effect */
+    background-color: #f0f0f0; 
     color: #555;
 }
 
-/* Button Icons */
+
 .button-icon {
     width: 24px;
     height: 24px;
     margin-right: 10px;
+}
+/* Consent Banner */
+.consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consent-banner p {
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+.consent-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.consent-button:hover {
+    background-color: #0056b3;
+}
+
+.disabled-link {
+    pointer-events: none; 
+    opacity: 0.5; 
 }
