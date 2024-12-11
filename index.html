@@ -53,10 +53,21 @@
                 <img src="assets/flintk12Logo.png" alt="FlintK12 Icon" class="button-icon">
                 FlintK12 Based AI Chemistry Teacher
             </a>
-            <a href="https://knowt.com/flashcards/2db6c7e6-cdf6-45ec-986b-e74bcb64e7db?isNew=true" class="link-button">
+            <a href="https://knowt.com/flashcards/2db6c7e6-cdf6-45ec-986b-e74bcb64e7db?isNew=true" class="link-button" onclick="showKnowtWarning(event)">
                 <img src="assets/knowtLogo.png" alt="Knowt Icon" class="button-icon">
                 Knowt Chemistry Flashcards
             </a>
+            <script>
+                function showKnowtWarning(event) {
+                    const userConfirmed = confirm(
+                        "By continuing, you acknowledge that Knowt is a third-party platform and usage is subject to its terms and conditions. You also understand that this study set is a basis and you it is HIGHLY recommended to create your own study set?"
+                    );
+            
+                    if (!userConfirmed) {
+                        event.preventDefault();
+                    }
+                }
+            </script>
             <section class="links">
                 <a href="https://knowt.com/flashcards/0c538498-c511-42b0-af15-e75db17cb773" class="link-button">
                     <img src="assets/knowtLogo.png" alt="OpenAI Logo Icon" class="button-icon">
